@@ -1,9 +1,10 @@
 {
   "name": "@yolean/bunyan",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "a JSON logging library for node.js services",
   "author": "Trent Mick <trentm@gmail.com> (http://trentm.com)",
   "main": "./lib/bunyan.js",
+  "types": "./lib/index.d.ts",
   "bin": {
     "bunyan": "./bin/bunyan"
   },
@@ -23,6 +24,7 @@
   ],
   "license": "MIT",
   "files": [
+    "index.d.ts",
     "bin",
     "lib"
   ],
