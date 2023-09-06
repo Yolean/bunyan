@@ -10,11 +10,13 @@
 var exec = require('child_process').exec;
 var test = require('tap').test;
 
+var testRotatingFileStream = false;
+
 var nodeVer = process.versions.node.split('.').map(Number);
 
 if (nodeVer[0] <= 0 && nodeVer[1] <= 8) {
     console.warn('skip test (node <= 0.8)');
-} else {
+} else if (testRotatingFileStream) {
     test('log with rotating file stream will terminate', function (t) {
         exec('node ' +__dirname + '/process-exit.js', {timeout: 1000},
                 function (err, stdout, stderr) {

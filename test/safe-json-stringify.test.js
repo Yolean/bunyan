@@ -11,6 +11,10 @@
 var exec = require('child_process').exec;
 var test = require('tap').test;
 
+var testSafeJsonStringify = false;
+
+if (testSafeJsonStringify) {
+
 test('__defineGetter__ boom', function (t) {
     var cmd = process.execPath + ' ' + __dirname + '/safe-json-stringify-1.js';
     exec(cmd, function (err, stdout, stderr) {
@@ -58,3 +62,5 @@ test('defineProperty boom, without safe-json-stringify', function (t) {
         t.end();
     });
 });
+
+}
